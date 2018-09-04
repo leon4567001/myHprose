@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <!--<servlet-class>hprose.server.HproseServlet</servlet-class>-->
+        <servlet-class>hprose.server.HproseServlet</servlet-class>
+        <init-param>
+            <param-name>class</param-name>
+            <param-value>Hello</param-value>
+        </init-param>
+        <init-param>
+            <param-name>crossDomain</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/Hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>ForLogin</description>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>service.LoginServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ValidateServlet</servlet-name>
+        <!--<servlet-class>hprose.server.HproseServlet</servlet-class>-->
+        <servlet-class>hprose.server.HproseServlet</servlet-class>
+        <init-param>
+            <param-name>class</param-name>
+            <param-value>service.HproseValidate</param-value>
+        </init-param>
+        <init-param>
+            <param-name>crossDomain</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidateServlet</servlet-name>
+        <url-pattern>/HproseValidate</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

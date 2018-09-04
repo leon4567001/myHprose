@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="myHprose:war exploded">
+    <output-path>D:/apache-tomcat-7.0.84/webapps/myHprose</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="myHprose/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="myHprose" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="Hibernate 4.2.2-4.2.2" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/hprose_for_java_8.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
